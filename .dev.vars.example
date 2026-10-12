@@ -1,0 +1,6 @@
+# Copy to .dev.vars locally; never commit real secrets.
+ADMIN_PASSWORD=replace-with-a-long-unique-password
+SESSION_SECRET=replace-with-at-least-32-random-characters
+WHATSAPP_ACCESS_TOKEN=your-meta-cloud-api-token
+WHATSAPP_PHONE_NUMBER_ID=your-whatsapp-phone-number-id
+WHATSAPP_VERIFY_TOKEN=your-random-webhook-verification-token
