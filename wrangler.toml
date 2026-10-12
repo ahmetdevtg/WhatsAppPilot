@@ -1,4 +1,4 @@
-name = "whatsapp-pilot"
+name = "whatsapppilot"
 main = "src/index.ts"
 compatibility_date = "2026-10-01"
 workers_dev = true
@@ -24,3 +24,4 @@ retry_delay = 60
 [vars]
 APP_NAME = "WhatsAppPilot"
 WHATSAPP_API_VERSION = "v23.0"
+WHATSAPP_PHONE_NUMBER_ID = "1414457725079060"
