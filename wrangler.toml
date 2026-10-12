@@ -1,0 +1,26 @@
+name = "whatsapp-pilot"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+workers_dev = true
+logpush = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "whatsapp-pilot-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[[queues.producers]]
+binding = "SEND_QUEUE"
+queue = "whatsapp-pilot-send"
+
+[[queues.consumers]]
+queue = "whatsapp-pilot-send"
+max_batch_size = 10
+max_batch_timeout = 5
+max_retries = 5
+retry_delay = 60
+
+[vars]
+APP_NAME = "WhatsAppPilot"
+WHATSAPP_API_VERSION = "v23.0"
