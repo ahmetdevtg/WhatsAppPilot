@@ -52,11 +52,11 @@ export async function isAuthenticated(request: Request, env: Env): Promise<boole
 }
 
 export function sessionCookie(token: string, secure: boolean): string {
-  return COOKIE_NAME + "=" + encodeURIComponent(token) + "; HttpOnly; Secure" + (secure ? "" : "") + "; SameSite=Strict; Path=/; Max-Age=43200";
+  return COOKIE_NAME + "=" + encodeURIComponent(token) + "; HttpOnly" + (secure ? "; Secure" : "") + "; SameSite=Strict; Path=/; Max-Age=43200";
 }
 
 export function clearSessionCookie(): string {
-  return COOKIE_NAME + "=; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=0";
+  return COOKIE_NAME + "=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0";
 }
 
 export function json(data: unknown, status = 200): Response {
